@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Blind Form Filler",
+  "version": "1.0",
+  "description": "A Chrome extension that allows users to fill out forms using speech input.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
